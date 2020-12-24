@@ -41,7 +41,7 @@ app.post("/delete",async function(req,res){
 
 app.get("/data",async function(req,res){
     var data = await Data.find({});
-    res.send("data")
+    res.send(data)
 })
 
 app.post("/update",async function(req,res){
