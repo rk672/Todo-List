@@ -66,15 +66,15 @@ $.ajax({
     type:"GET",
     dataType: "text",
 success: function (data, status, xhr) {// success callback function
-   // console.log(data);
+     // console.log(data);
     //alert(data);
-     $("#list").append("<p><span><i class='fa fa-trash'></i></span> Rishabh</p>");
-  //  var data1=JSON.parse(data);
-    /*for (const key in data1) {
+    //$("#list").append("<p><span><i class='fa fa-trash'></i></span> Rishabh</p>");
+    var data1=JSON.parse(data);
+    for (const key in data1) {
         $("#list").append("<p id="+data1[key]._id+"><span><i class='fa fa-trash'></i></span> " + data1[key].name + "</p>");
         if(data1[key].isChecked)
         $("#"+data1[key]._id).toggleClass("completed");
-    }*/
+    }
 
 },
 error: function (jqXhr, textStatus, errorMessage) {
