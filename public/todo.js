@@ -79,5 +79,6 @@ success: function (data, status, xhr) {// success callback function
 error: function (jqXhr, textStatus, errorMessage) {
     $('p').append('Error' + errorMessage);
     console.log("error");
+    $("#list").append("<p id='123455'><span><i class='fa fa-trash'></i></span> Nitesh </p>");
 }}
 );
