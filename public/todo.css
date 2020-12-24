@@ -1,0 +1,81 @@
+body {background-color:lightpink}
+
+
+div {
+    width: 250px;
+    margin :100px auto;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+h3 {
+    background-color:darkblue;
+    color:white;
+    padding:5px 10px 5px 10px;
+    margin:0;
+    font-weight: normal;
+    
+}
+
+#list,p{
+    margin:0;
+    background-color: lightgrey;
+}
+
+p
+{
+    line-height:30px;
+}
+
+p:nth-of-type(odd)
+{
+    background-color: white;
+
+}
+
+input
+{
+    width:inherit;
+    padding:5px 10px 5px 10px;
+    box-sizing: border-box;
+    color:darkblue;
+    background-color: lightgrey;
+    outline: none;
+    border: 3px solid rgba(0,0,0,0);
+}
+
+input:focus {
+    border:2px solid blue;
+    outline :none;
+    background-color: white;
+    
+}
+
+.completed
+{
+    color:gray;
+    text-decoration: line-through;
+}
+
+.fa-plus
+{
+    float :right;
+}
+
+p:hover span
+{
+    width: 40px;
+    opacity: 1.0;
+}
+span
+{
+    color:white;
+    background-color: red;
+    text-align: center;
+    width:0;
+    height:30px;
+    margin-right:5px;
+    transition: 0.3s;
+    display: inline-block;
+    opacity:0;
+}
+
+
