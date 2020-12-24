@@ -1,6 +1,7 @@
 var express = require("express");
 var app = express();
 var bodyparser = require("body-parser");
+var PORT = process.env.PORT || 8000
 //app.use(express.urlencoded({extended: true}));
 app.use(express.static("public"));
 //app.use(express.bodyParser());
@@ -49,4 +50,4 @@ app.post("/update",async function(req,res){
     res.send("ok");
 })
 
-app.listen(8000);
+app.listen(PORT);
