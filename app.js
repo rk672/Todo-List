@@ -1,9 +1,8 @@
 var express = require("express");
 var app = express();
+var PORT = process.env.PORT || 8000;
 var bodyparser = require("body-parser");
-//app.use(express.urlencoded({extended: true}));
 app.use(express.static("public"));
-//app.use(express.bodyParser());
 app.use(bodyparser.json());
 var Data = require("./mongo");
 
@@ -49,4 +48,6 @@ app.post("/update",async function(req,res){
     res.send("ok");
 })
 
-app.listen(8000);
+app.listen(PORT,function(){
+    console.log("listening to"+PORT);
+});
