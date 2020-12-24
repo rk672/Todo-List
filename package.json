@@ -5,8 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-     "start": "node --exec babel-node app.js"
-   }, 
+    "start": "nodemon --exec babel-node app.js"
+  },
   "author": "rishabh kumar",
   "license": "ISC",
   "dependencies": {
@@ -15,5 +15,8 @@
     "jquery": "^3.5.1",
     "mogoose": "0.0.1-security",
     "mongoose": "^5.11.8"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
   }
 }
