@@ -4,16 +4,16 @@ var PORT = process.env.PORT || 8000;
 var bodyparser = require("body-parser");
 app.use(express.static("public"));
 app.use(bodyparser.json());
-var Data = require("./mongo");
+//var Data = require("./mongo");
 
-var mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost:27017/Todo",{useNewUrlParser:true , useUnifiedTopology : true})
+//var mongoose = require("mongoose");
+/*mongoose.connect("mongodb://localhost:27017/Todo",{useNewUrlParser:true , useUnifiedTopology : true})
     .then(function(){
         console.log("connection open");
     })
     .catch(function(err){
         console.log(err);
-    });
+    });*/
 
 app.get("/",function(req,res){
     res.render("todo.ejs")
@@ -26,25 +26,25 @@ app.post("/newTodo",function(req,res){
         console.log(key+" : "+data[key]);
     }*/
     //res.status(200);
-    new Data({name : data.name,isChecked:false}).save();
+    //new Data({name : data.name,isChecked:false}).save();
     res.send("ok");
 
 });
 
 app.post("/delete",async function(req,res){
     var data =req.body.id;
-    await Data.findByIdAndDelete(data);
+ //   await Data.findByIdAndDelete(data);
     res.send("ok");
 })
 
 app.get("/data",async function(req,res){
-    var data = await Data.find({});
-    res.send(data)
+  //  var data = await Data.find({});
+    res.send("data")
 })
 
 app.post("/update",async function(req,res){
     var data =req.body.id;
-    await Data.findByIdAndUpdate(data,{isChecked:req.body.isChecked});
+    //await Data.findByIdAndUpdate(data,{isChecked:req.body.isChecked});
     res.send("ok");
 })
 
