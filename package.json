@@ -4,9 +4,8 @@
   "description": "by rishabh",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --exec babel-node Todo-List/app.js"
-  },
+    "test": "echo \"Error: no test specified\" && exit 1"
+   }, 
   "author": "rishabh kumar",
   "license": "ISC",
   "dependencies": {
